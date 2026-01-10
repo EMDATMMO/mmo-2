@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện mô phỏng Viettel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        :root { --viettel-red: #ee0033; }
+        .bg-viettel { background-color: var(--viettel-red) !important; }
+        .navbar-brand img { height: 40px; }
+        .hero-slider { height: 450px; width: 100%; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .service-card { border: none; transition: 0.3s; text-align: center; padding: 20px; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .btn-viettel { background-color: var(--viettel-red); color: white; border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-viettel sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>VIETTEL</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">DI ĐỘNG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">INTERNET</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TRUYỀN HÌNH</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">DỊCH VỤ SỐ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/1920x600/ee0033/ffffff?text=Khuyến+Mãi+Di+Động" alt="Banner 1"></div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/1920x600/00aba9/ffffff?text=Lắp+Đặt+Internet+Wifi" alt="Banner 2"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="container my-5">
+        <h3 class="text-center mb-4">Dịch vụ nổi bật</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card service-card">
+                    <h5>Gói cước Data</h5>
+                    <p>Siêu tốc, dung lượng lớn</p>
+                    <button class="btn btn-viettel btn-sm">Xem chi tiết</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card service-card">
+                    <h5>Đổi Sim 4G</h5>
+                    <p>Trải nghiệm tốc độ cao</p>
+                    <button class="btn btn-viettel btn-sm">Xem chi tiết</button>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.hero-slider', {
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            autoplay: { delay: 3000 },
+        });
+    </script>
+</body>
+</html>
